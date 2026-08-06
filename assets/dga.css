@@ -494,3 +494,127 @@ tbody tr:last-child > * { border-bottom: 0; }
   a { color: #000; text-decoration: underline; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 11px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   طبقة التسويق — مكوّنات صفحة المنتج
+   ═══════════════════════════════════════════════════════════════════
+   الرموز نفسها (الألوان والمسافات والطباعة)، وتركيبٌ أجرأ: عرضٌ
+   متبادل بلقطاتٍ كبيرة بدل شبكةِ بطاقاتٍ متساوية. واللقطات داكنة لأن
+   التطبيق داكنٌ افتراضًا، فالأشرطة التي تحملها داكنة كي تجلس فيها.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── إطار الهاتف ── */
+.phone {
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: 268px;
+  margin-inline: auto;
+  border-radius: 34px;
+  padding: 10px;
+  background: linear-gradient(160deg, #2f3a34, #131a16);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .08) inset;
+}
+.phone::before {   /* السمّاعة */
+  content: ""; position: absolute; top: 18px; inset-inline: 0;
+  inline-size: 52px; block-size: 5px; margin-inline: auto;
+  background: rgba(255, 255, 255, .18); border-radius: var(--radius-full);
+  z-index: 2;
+}
+.phone img {
+  display: block; inline-size: 100%; block-size: auto;
+  border-radius: 26px; background: #0e1512;
+}
+.phone-tilt { transform: rotate(-2.5deg); }
+.phone-tilt-r { transform: rotate(2.5deg); }
+@media (prefers-reduced-motion: reduce) { .phone-tilt, .phone-tilt-r { transform: none; } }
+
+/* ── شريط الأرقام ── */
+.stats-band {
+  display: grid; gap: 1px; background: rgba(255, 255, 255, .14);
+  grid-template-columns: repeat(auto-fit, minmax(min(50%, 150px), 1fr));
+  border-radius: var(--radius-2xl); overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .14);
+}
+.stats-band > div { background: var(--p-900); padding: var(--space-4xl) var(--space-2xl); text-align: center; }
+.stats-band b {
+  display: block; font-size: 36px; line-height: 44px; font-weight: 700;
+  color: #fff; letter-spacing: -.01em;
+}
+.stats-band span { display: block; margin-top: var(--space-xs); font-size: 14px; line-height: 20px; color: #b6c9bd; }
+
+/* ── العرض المتبادل ── */
+.showcase { padding-block: var(--space-9xl); }
+.showcase-dark {
+  background: var(--p-950);
+  background-image: radial-gradient(90% 120% at 20% 0%, rgba(37, 147, 95, .28) 0%, transparent 60%);
+  color: #fff;
+}
+.showcase-dark h2, .showcase-dark h3 { color: #fff; }
+.showcase-dark p { color: #c6dbcf; }
+.showcase-grid {
+  display: grid; align-items: center; gap: var(--space-8xl) var(--space-7xl);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+.showcase-body .eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-sm);
+  font-size: 12px; line-height: 18px; font-weight: 600; letter-spacing: .08em;
+  color: var(--p-300); margin-bottom: var(--space-xl);
+}
+.showcase-dark .eyebrow { color: var(--p-300); }
+/* يتبع النمط: الأخضر الغامق الثابت يقرأ 2.8:1 على خلفيةٍ داكنة. */
+.showcase-light .eyebrow { color: var(--link); }
+.showcase-body h2 { font-size: 30px; line-height: 40px; margin-bottom: var(--space-xl); }
+.showcase-body > p { font-size: 18px; line-height: 30px; }
+.showcase-list { list-style: none; margin: var(--space-3xl) 0 0; padding: 0; }
+.showcase-list li {
+  display: flex; gap: var(--space-md); align-items: flex-start;
+  margin-block: var(--space-lg); font-size: 16px; line-height: 24px;
+}
+.showcase-list svg { inline-size: 20px; block-size: 20px; flex: none; margin-top: 2px; color: var(--p-400); }
+.showcase-light .showcase-list svg { color: var(--p-600); }
+
+/* ── شبكة البنتو ── */
+.bento { display: grid; gap: var(--space-3xl); grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+.bento-item {
+  background: var(--card); border: 1px solid var(--border-soft);
+  border-radius: var(--radius-2xl); padding: var(--space-4xl) var(--space-3xl);
+}
+.bento-item svg { inline-size: 26px; block-size: 26px; color: var(--primary); margin-bottom: var(--space-lg); }
+.bento-item h3 { font-size: 18px; line-height: 28px; margin-bottom: var(--space-sm); }
+.bento-item p { color: var(--text-muted); font-size: 14px; line-height: 22px; }
+
+/* ── الخطوات ── */
+.steps { display: grid; gap: var(--space-3xl); grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); counter-reset: s; }
+.step { position: relative; padding-top: var(--space-6xl); }
+.step::before {
+  counter-increment: s; content: counter(s);
+  position: absolute; top: 0; inset-inline-start: 0;
+  inline-size: 40px; block-size: 40px; border-radius: var(--radius-full);
+  background: var(--primary-tint); color: var(--primary-strong);
+  display: grid; place-items: center; font-weight: 700; font-size: 16px;
+  border: 1px solid var(--primary);
+}
+.step h3 { font-size: 18px; line-height: 28px; margin-bottom: var(--space-sm); }
+.step p { color: var(--text-muted); font-size: 14px; line-height: 22px; }
+
+/* ── شريط الدعوة ── */
+.cta-band {
+  background-color: var(--p-800);
+  background-image: radial-gradient(100% 140% at 80% 0%, rgba(84, 192, 138, .3) 0%, transparent 60%),
+                    linear-gradient(160deg, var(--p-700), var(--p-900));
+  border-radius: var(--radius-4xl);
+  padding: var(--space-8xl) var(--space-4xl); text-align: center; color: #fff;
+  margin-block: var(--space-9xl);
+}
+.cta-band h2 { color: #fff; font-size: 30px; line-height: 40px; margin-bottom: var(--space-md); }
+.cta-band p { color: #d8ece1; max-width: 48ch; margin-inline: auto; font-size: 18px; line-height: 28px; }
+.cta-band .hero-actions { margin-top: var(--space-4xl); }
+
+@media (max-width: 700px) {
+  .showcase { padding-block: var(--space-7xl); }
+  .showcase-body h2, .cta-band h2 { font-size: 24px; line-height: 32px; }
+  .showcase-body > p { font-size: 16px; line-height: 26px; }
+  .stats-band b { font-size: 30px; line-height: 38px; }
+  .phone-tilt, .phone-tilt-r { transform: none; }
+  .cta-band { padding: var(--space-6xl) var(--space-2xl); border-radius: var(--radius-2xl); }
+}

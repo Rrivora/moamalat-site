@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>معاملات — نظام إدارة المخزن</title>
-<meta name="description" content="نظام إدارة المخزن والمبيعات والتحصيلات لأصحاب المحلّات. يعمل بلا إنترنت، وبياناتك تبقى على جهازك.">
+<title>معاملات — نظام إدارة المخزن والمبيعات والأقساط</title>
+<meta name="description" content="مخزنك ومبيعاتك وأقساطك وتقاريرك في تطبيقٍ واحد يعمل بلا إنترنت. فواتير تُرسَل بواتساب، ولوحة أقساط تلاحق المتأخّرات، وبياناتك على جهازك وحده.">
 <meta name="theme-color" content="#104631">
-<meta property="og:title" content="معاملات — نظام إدارة المخزن">
-<meta property="og:description" content="نظام إدارة المخزن والمبيعات والتحصيلات لأصحاب المحلّات. يعمل بلا إنترنت، وبياناتك تبقى على جهازك.">
+<meta property="og:title" content="معاملات — نظام إدارة المخزن والمبيعات والأقساط">
+<meta property="og:description" content="مخزنك ومبيعاتك وأقساطك وتقاريرك في تطبيقٍ واحد يعمل بلا إنترنت.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_EG">
 <link rel="preload" href="assets/fonts/IBMPlexSansArabic-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -44,167 +44,228 @@
 
 <main id="main">
 
+  <!-- ═══ البطل ═══ -->
   <section class="hero">
     <div class="shell">
-      <span class="hero-badge">يعمل بلا إنترنت</span>
-      <h1>نظام إدارة المخزن، في جيبك</h1>
+      <span class="hero-badge">٥٠ يومًا تجربة كاملة — بلا بطاقة</span>
+      <h1>محلُّك كلّه في جيبك،<br>ولو انقطع الإنترنت</h1>
       <p class="lede">
-        مخزونك ومبيعاتك وتحصيلاتك وأقساطك في تطبيقٍ واحد.
-        بياناتك تُحفظ على جهازك أنت، لا على خادمٍ لنا.
+        مخزون، وفواتير، وأقساط تلاحق نفسها، وتقارير تُقرأ في ثانية.
+        يعمل دون اتصال بالكامل، وبياناتك تبقى على جهازك أنت.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-on-dark" href="support.html">اطلب نسخة</a>
-        <a class="btn btn-ghost-dark" href="privacy.html">سياسة الخصوصية</a>
+        <a class="btn btn-on-dark" href="support.html">اطلب نسختك</a>
+        <a class="btn btn-ghost-dark" href="#features">شاهد ما يفعله</a>
+      </div>
+
+      <div style="margin-top:var(--space-9xl);max-width:900px;margin-inline:auto">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:var(--space-3xl);align-items:center">
+          <div class="phone phone-tilt">
+            <img src="assets/shots/dashboard.webp" width="520" height="1069" alt="لوحة معلومات معاملات: الأقساط المتأخّرة والمستحقّة برسمٍ دائريّ، واختصارات فاتورة بيع واضافة أرصدة" loading="eager" decoding="async">
+          </div>
+          <div class="phone">
+            <img src="assets/shots/collections.webp" width="520" height="1069" alt="لوحة الأقساط: صفوف بأرقام الفواتير وأسماء العملاء وحالات متأخّرة ومستحقّة، مع أزرار اتصال وواتساب" loading="lazy" decoding="async">
+          </div>
+          <div class="phone phone-tilt-r">
+            <img src="assets/shots/invoice.webp" width="520" height="1069" alt="فاتورة بيع بترويسة المحلّ واسم العميل وأصنافها وإجماليها، وزرّ مشاركة عبر واتساب" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-band" style="margin-top:var(--space-8xl)">
+        <div><b>٨</b><span>أقسام تغطّي الدورة كاملة</span></div>
+        <div><b>٢٠</b><span>شاشة عمل</span></div>
+        <div><b>٥٠</b><span>يومًا تجربة مجانية</span></div>
+        <div><b>٠</b><span>خوادم تحفظ بياناتك</span></div>
       </div>
     </div>
   </section>
 
+  <!-- ═══ الأقساط ═══ -->
+  <section class="showcase showcase-dark" id="features" aria-labelledby="sc-inst">
+    <div class="shell">
+      <div class="showcase-grid">
+        <div class="showcase-body">
+          <span class="eyebrow">الأقساط والتحصيل</span>
+          <h2 id="sc-inst">تعرف من تأخّر، وتتّصل به من نفس الشاشة</h2>
+          <p>
+            كلُّ أقساط كلِّ الفواتير النشطة في لوحةٍ واحدة مرتّبة بالاستحقاق.
+            الحالة تُحسب لحظتها — متأخّر، ومستحقّ، ومجدول — فلا تبحث عن
+            المتأخّرات، هي التي تظهر لك أوّلًا.
+          </p>
+          <ul class="showcase-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>تحصيل كامل أو <strong>دفعة جزئية</strong>، والباقي يُرحَّل إلى القسط التالي تلقائيًّا.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>زرّ اتصال وزرّ واتساب في كل صفّ، برسالة تذكيرٍ جاهزة.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>إعادة جدولة قسط، وتراجُعٌ عن التحصيل إن أخطأت.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>القسط الأخير يحمل فرق التقريب، فلا يضيع قرشٌ في الجدول.</span></li>
+          </ul>
+        </div>
+        <div class="phone"><img src="assets/shots/collections.webp" width="520" height="1069" alt="سبعة أقساط: خمسة متأخّرة بحالةٍ حمراء واثنان مستحقّان، بإجمالي ١٢٬٨٠٨ جنيهًا" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ الفواتير ═══ -->
+  <section class="showcase showcase-light" aria-labelledby="sc-inv">
+    <div class="shell">
+      <div class="showcase-grid">
+        <div class="phone"><img src="assets/shots/invoice.webp" width="520" height="1069" alt="فاتورة INV-24 بترويسة معرض النور وبيانات العميل وصنفٍ بسعره وإجماليها ٥٬٧٠٠ جنيه" loading="lazy" decoding="async"></div>
+        <div class="showcase-body">
+          <span class="eyebrow">الفواتير</span>
+          <h2>فاتورةٌ باسم محلّك، تصل العميل على واتساب</h2>
+          <p>
+            اختر العميل والأصناف، وقرّر كاش أو تقسيط — ويتولّى التطبيق الباقي:
+            رقمٌ متسلسل لا ينكسر، وترويسةٌ بشعارك وهاتفك، وصورةٌ تُرسَل بضغطة.
+          </p>
+          <ul class="showcase-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>كاش أو تقسيط بدفعةٍ مقدّمة وعددِ أقساطٍ تختاره.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>مسوّدةٌ تُحفظ وحدها، فلا يضيع عملك إن أُغلق التطبيق.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>ملاحظةٌ صوتية وتوقيعٌ ومرفقاتٌ على الفاتورة.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>الإلغاء يردّ الأصناف إلى المخزن — <strong>والفاتورة لا تُحذف</strong>.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ المخزن ═══ -->
+  <section class="showcase showcase-dark" aria-labelledby="sc-stock">
+    <div class="shell">
+      <div class="showcase-grid">
+        <div class="showcase-body">
+          <span class="eyebrow">المخزن</span>
+          <h2>كم عندك، وأين، ومتى ينفد</h2>
+          <p>
+            أرصدةُ كل صنفٍ في كل مخزن، وحدُّ تنبيهٍ لكل منتج يصرخ قبل أن
+            تكتشف النقص من عميلٍ طلبه ولم تجده.
+          </p>
+          <ul class="showcase-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span><strong>مخازن متعدّدة</strong>، وتحويلاتٌ بينها بأثرٍ صفريّ على الإجمالي.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>استلام بضاعةٍ من المورّد بصورة فاتورته مرفقة.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>تسجيل التالف وقيمته، فلا يختفي الفاقد في الفرق.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>سعر شراءٍ وسعر بيعٍ لكل صنف — وعليهما يُحسب الربح.</span></li>
+          </ul>
+        </div>
+        <div class="phone"><img src="assets/shots/inventory.webp" width="520" height="1069" alt="شاشة المخزن: المخزن الرئيسي بأربعة عشر منتجًا، بحالات متوفّر وتنبيه لكل صنف" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ التقارير ═══ -->
+  <section class="showcase showcase-light" aria-labelledby="sc-rep">
+    <div class="shell">
+      <div class="showcase-grid">
+        <div class="phone"><img src="assets/shots/reports.webp" width="520" height="1069" alt="الإحصائيات: منحنى هذا الشهر مقابل الشهر الماضي، وأفضل المنتجات بالربح التقديري، وأزرار مشاركة وتصدير CSV" loading="lazy" decoding="async"></div>
+        <div class="showcase-body">
+          <span class="eyebrow">التقارير والإحصائيات</span>
+          <h2>هل هذا الشهر أفضل من الماضي؟ الجواب في سطر</h2>
+          <p>
+            مقارنةٌ تراكمية بين الفترة وسابقتها، وأكثر المنتجات ربحًا،
+            وكشوف حسابٍ لكل عميلٍ ومورّد — تُصدَّر CSV أو تُشارَك صورة.
+          </p>
+          <ul class="showcase-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>مبيعات · تحصيل · أقساط · ربحية · تالف.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>المركز المالي: النقد والذمم وقيمة المخزون في صفحة.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>كشف حساب العميل: فواتيره ودفعاته ورصيده.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg><span>تصدير CSV يفتح في Excel مباشرةً.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ بقيّة المزايا ═══ -->
   <div class="shell">
-
-    <section aria-label="مزايا أساسية" style="padding-block:var(--space-6xl)">
-      <div class="feature-strip">
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2 12a10 10 0 0 1 20 0M2 12a10 10 0 0 0 20 0M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20"/><path d="m3 3 18 18"/>
-          </svg>
-          <strong>بلا إنترنت</strong>
-          <span>البيع والتحصيل يعملان دائمًا</span>
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 3 4 6.5v5c0 4.6 3.4 8.4 8 9.5 4.6-1.1 8-4.9 8-9.5v-5z"/><path d="m9 12 2 2 4-4"/>
-          </svg>
-          <strong>بياناتك لك</strong>
-          <span>محفوظة على جهازك وحده</span>
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 5h16M9 5v14M4 19h16"/><path d="M14 9h5M14 13h5"/>
-          </svg>
-          <strong>عربيّ بالكامل</strong>
-          <span>واجهة من اليمين إلى اليسار</span>
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/>
-          </svg>
-          <strong>نسخٌ احتياطيّ</strong>
-          <span>إلى Drive الخاص بك</span>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="features-title">
+    <section aria-labelledby="more-title">
       <div class="section-head">
         <div>
-          <h2 id="features-title">ما الذي يفعله</h2>
-          <p>كلّ ما يحتاجه محلٌّ صغير لإدارة يومه، بلا تعقيد.</p>
+          <h2 id="more-title">وأشياء تُلاحَظ حين تغيب</h2>
+          <p>تفاصيلُ تُبنى لمحلٍّ حقيقيّ، لا لعرضٍ تقديميّ.</p>
         </div>
       </div>
-
-      <div class="grid">
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/>
-            </svg>
-          </div>
-          <h3>المخزون</h3>
-          <p>أصنافك وكمّياتها وتكلفة شرائها وسعر بيعها، مع تنبيهٍ حين يقارب صنفٌ النفاد.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 3h12l1 18H5z"/><path d="M9 7h6M9 11h6M9 15h4"/>
-            </svg>
-          </div>
-          <h3>الفواتير والمبيعات</h3>
-          <p>فاتورةٌ مرقّمة بترتيبٍ لا ينكسر، تُصدَّر صورةً وتُرسَل إلى العميل عبر واتساب مباشرةً.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 6.5h18v11H3z"/><circle cx="12" cy="12" r="2.5"/><path d="M6.5 12h.01M17.5 12h.01"/>
-            </svg>
-          </div>
-          <h3>التحصيلات والأقساط</h3>
-          <p>من عليه مبلغ، وكم بقي، ومتى يستحقّ — مع تذكيرٍ يوميّ بالأقساط المستحقّة.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
-            </svg>
-          </div>
-          <h3>المركز المالي</h3>
-          <p>ما لك وما عليك في صفحةٍ واحدة: النقد، والذمم، وقيمة المخزون، وصافي الربح.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
-            </svg>
-          </div>
+      <div class="bento">
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12a10 10 0 0 1 20 0M12 2a15 15 0 0 1 0 20"/><path d="m3 3 18 18"/></svg>
+          <h3>يعمل دون اتصال</h3>
+          <p>البيع والتحصيل والمخزون بلا إنترنت. المحلُّ الذي سقطت شبكته يجب أن يبيع.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19a6.5 6.5 0 0 1 13 0"/><path d="M17 11h5M17 15h5"/></svg>
+          <h3>موظّفون وصلاحيات</h3>
+          <p>لكل موظّفٍ ما يراه وما يفعله، ومفوَّضون على مخازن بعينها دون غيرها.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
           <h3>مواقع العملاء</h3>
-          <p>موقع كلّ عميل على الخريطة، فيصل المندوب إليه بلا سؤالٍ عن الطريق.</p>
-        </article>
-
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>
-            </svg>
-          </div>
+          <p>موقع كلّ عميل على الخريطة، فيصل مندوبك إليه بلا سؤالٍ عن الطريق.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
           <h3>ملاحظات صوتية</h3>
-          <p>سجّل ملاحظةً بصوتك وأرفقها بالفاتورة، بدل أن تكتبها أو تنساها.</p>
-        </article>
-
+          <p>سجّل بصوتك ما لا يتّسع له حقل: وعدُ عميلٍ، أو اتفاقٌ على موعد.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4m0 0L8 8m4-4 4 4"/><path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/></svg>
+          <h3>نسخٌ احتياطيّ مشفَّر</h3>
+          <p>إلى Drive الخاص بك، يدويًّا أو بجدول، وبكلمة سرٍّ إن شئت.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <h3>عربيّ وإنجليزيّ</h3>
+          <p>الاتجاهان مدعومان بالكامل، والافتراضيّ عربيٌّ من اليمين إلى اليسار.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5h18v11H3z"/><path d="M7 10h4M7 14h8"/></svg>
+          <h3>مورّدون ومشتريات</h3>
+          <p>كشفٌ لكل مورّد: ما اشتريتَه، وما دفعتَه، وما بقي عليك.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg>
+          <h3>تحويلات بين المخازن</h3>
+          <p>نقلٌ وإرجاعٌ بحالاتٍ واضحة، والمقبول لا يغيّر إجماليّ المخزون.</p>
+        </div>
+        <div class="bento-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6.5v5c0 4.6 3.4 8.4 8 9.5 4.6-1.1 8-4.9 8-9.5v-5z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3>بياناتك لا تغادر جهازك</h3>
+          <p>لا خادمَ يحفظ عملك. ولو انتهت الرخصة تبقى دفاترك مرئيّةً وقابلةً للتصدير.</p>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="privacy-title">
+    <!-- ═══ الخطوات ═══ -->
+    <section aria-labelledby="how-title">
       <div class="section-head">
         <div>
-          <h2 id="privacy-title">بياناتك لك</h2>
-          <p>لا خادمَ عندنا يحفظ عملك.</p>
+          <h2 id="how-title">من التثبيت إلى أوّل فاتورة</h2>
+          <p>ثلاث خطوات، وربع ساعة.</p>
         </div>
-        <a class="section-link" href="privacy.html">
-          اقرأ التفصيل كاملًا
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m0 0 7-7m-7 7 7 7"/></svg>
-        </a>
       </div>
-      <div class="note">
-        <p class="note-title">الأصناف والعملاء والفواتير لا تغادر جهازك</p>
-        <p>
-          كلّها تُخزَّن في قاعدة بياناتٍ داخل مساحة التطبيق الخاصّة، ولا تُرسَل
-          إلينا — فلا يوجد لدينا خادمٌ يستقبلها أصلًا. والنسخة الاحتياطية، إن
-          فعّلتها، تذهب إلى Drive الخاص بك أنت بأضيق صلاحيةٍ ممكنة: لا يرى
-          التطبيق من ملفاتك إلا ما أنشأه بنفسه.
-        </p>
+      <div class="steps">
+        <div class="step">
+          <h3>هيّئ محلّك</h3>
+          <p>اسم المحلّ وشعاره وعملته ومخزنه الرئيسيّ وحساب المدير — معالجٌ واحد لا يُتخطّى.</p>
+        </div>
+        <div class="step">
+          <h3>أدخل أصنافك وعملاءك</h3>
+          <p>سعر شراءٍ وسعر بيعٍ وحدّ تنبيهٍ لكل صنف، وأكوادٌ تُولَّد وحدها للعملاء.</p>
+        </div>
+        <div class="step">
+          <h3>ابدأ البيع</h3>
+          <p>فاتورةٌ كاش أو تقسيط، وجدولُ الأقساط يُبنى وحده، والتحصيل يبدأ في موعده.</p>
+        </div>
       </div>
     </section>
 
-    <section aria-labelledby="req-title">
-      <div class="section-head">
-        <div>
-          <h2 id="req-title">المتطلّبات</h2>
-          <p>ما يلزم لتشغيل التطبيق.</p>
-        </div>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <tbody>
-            <tr><th scope="row">نظام التشغيل</th><td>أندرويد</td></tr>
-            <tr><th scope="row">الإنترنت</th><td>غير مطلوب للعمل اليوميّ — يلزم للتفعيل والنسخ الاحتياطي والخرائط فقط</td></tr>
-            <tr><th scope="row">حساب Google</th><td>اختياريّ، وللنسخ الاحتياطي وحده</td></tr>
-            <tr><th scope="row">اللغة</th><td>العربية، بواجهةٍ من اليمين إلى اليسار</td></tr>
-          </tbody>
-        </table>
+    <!-- ═══ الدعوة ═══ -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <h2 id="cta-title">جرّبه خمسين يومًا، كامل المزايا</h2>
+      <p>
+        بلا بطاقةٍ بنكية وبلا حساب. وإن قرّرت الاستمرار، مفتاحُ تفعيلٍ
+        واحد يُملى في مكالمة.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-on-dark" href="support.html">اطلب نسختك</a>
+        <a class="btn btn-ghost-dark" href="privacy.html">كيف نحمي بياناتك</a>
       </div>
     </section>
 
@@ -231,6 +292,7 @@
           <h2 id="f-site">الموقع</h2>
           <ul class="footer-links">
             <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#features">المزايا</a></li>
             <li><a href="support.html">الدعم والأسئلة المتكرّرة</a></li>
           </ul>
         </nav>
@@ -258,6 +320,9 @@
         </div>
 
       </div>
+      <p class="caption" style="margin-top:var(--space-6xl);color:var(--text-on-dark-muted)">
+        اللقطات من التطبيق نفسه، ببياناتٍ تجريبية لمحلٍّ افتراضيّ.
+      </p>
     </div>
   </div>
   <div class="footer-bar">
