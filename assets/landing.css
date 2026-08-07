@@ -138,11 +138,11 @@ a:hover { color: var(--p-300); }
 .brand { display: inline-flex; align-items: center; gap: var(--s-md); text-decoration: none; color: var(--fg); }
 .brand:hover { color: var(--fg); }
 .brand-mark {
-  inline-size: 38px; block-size: 38px; flex: none; border-radius: var(--r-xl);
-  background: linear-gradient(150deg, var(--p-400), var(--p-700));
-  color: #04140c; display: grid; place-items: center;
-  font-weight: 700; font-size: 18px;
-  box-shadow: 0 6px 18px -6px rgba(76, 192, 139, .55);
+  inline-size: 42px; block-size: 42px; flex: none;
+  object-fit: contain; display: block;
+  padding: 5px; border-radius: var(--r-xl);
+  background: #eef4f0;
+  box-shadow: 0 4px 14px -4px rgba(0, 0, 0, .6);
 }
 .brand b { display: block; font-size: 16px; line-height: 1.3; }
 .brand span { display: block; font-size: 12px; line-height: 1.3; color: var(--fg-muted); font-weight: 400; }
