@@ -1,21 +1,18 @@
 /* ═══════════════════════════════════════════════════════════════════
-   معاملات — تنسيق صفحة المنتج
+   شركتي — تنسيق الموقع
    ═══════════════════════════════════════════════════════════════════
    ملفُّ التنسيق الوحيد للموقع كلّه: الصفحة الرئيسية والصفحات
-   القانونية الثلاث. كان لكلٍّ منهما ملفّ، فبدت الصفحات القانونية
-   موقعًا آخر عند الانتقال إليها — فوُحِّدا، وحُذف القديم.
+   القانونية الثلاث — فلا تبدو الأخيرة موقعًا آخر عند الانتقال إليها.
 
-   والنصّ القانونيّ لم يتغيّر حرفًا في التوحيد، وقد قورن المتن قبل
-   وبعد حرفًا بحرف. مراجعةُ Google Play تقرأ تلك الصفحات.
+   الألوان من هويّة «شركتي» في التطبيق (`lib/core/theme.dart`):
+   الأزرق ‎#146DD5‎ والكحليّ ‎#0B3D7A‎، ومعهما برتقاليّ الأيقونة.
+   والمسافات وأنصاف الأقطار وسُلّم الطباعة من `@platformscode/core`
+   v1.0 كما كانت — لم يتغيّر إلا اللون.
 
-   والقيم منقولةٌ من `@platformscode/core` v1.0 (نظام DGA) ومن
-   `lib/core/theme.dart` في التطبيق — فالموقع والتطبيق نظامٌ واحد.
-
-   ── قرارُ تصميمٍ صريح: داكنةٌ دائمًا ─────────────────────────────
-   الصفحات القانونية تتبع نمط النظام. وهذه لا: التطبيق داكنٌ
-   افتراضًا (يقولها `app_theme.dart` صراحةً)، وكلُّ لقطةٍ هنا داكنة.
-   وصفحةٌ فاتحة تحمل تسع عشرة لقطةً داكنة تصير لوحةَ إعلاناتٍ لا
-   عرضَ منتج. فالتباين مفحوصٌ على الداكن وحده — وهو ما تُعرَض به.
+   ── قرارُ تصميمٍ صريح: كحليٌّ دائمًا ─────────────────────────────
+   لقطات المتجر (أداة `tool/store_marketing_test.dart`) تضع الشاشات
+   الفاتحة على قاعٍ كحليّ. والموقع يفعل الشيء نفسه: قاعٌ كحليّ داكن
+   تبرز عليه اللقطات الفاتحة. فالتباين مفحوصٌ على الكحليّ وحده.
    ═══════════════════════════════════════════════════════════════════ */
 
 @font-face {
@@ -45,26 +42,29 @@
   --r-2xl: 16px; --r-3xl: 20px; --r-4xl: 24px; --r-5xl: 32px;
   --r-full: 9999px;
 
-  /* الأخضر — تدرّج DGA */
-  --p-200: #b8eacb; --p-300: #88d8ad; --p-400: #54c08a;
-  --p-500: #25935f; --p-600: #1b8354; --p-700: #166a45;
-  --p-800: #14573a; --p-900: #104631; --p-950: #092a1e;
+  /* الأزرق — حول لون العلامة ‎#146DD5‎ (‏--p-600) */
+  --p-200: #c2dcfd; --p-300: #93c1fb; --p-400: #5ea2f3;
+  --p-500: #2b84e6; --p-600: #146dd5; --p-700: #0f58ad;
+  --p-800: #0b3d7a; --p-900: #0a2f5e; --p-950: #061228;
 
-  /* الحبر والأسطح — داكن */
-  --ink:      #0a0d0c;   /* القاع */
-  --ink-2:    #0e1512;   /* لوحُ التطبيق نفسه */
-  --surface:  #141c19;   /* بطاقة */
-  --surface-2:#1a2320;   /* بطاقة مرتفعة */
-  --line:     rgba(255, 255, 255, .12);
-  --line-2:   rgba(255, 255, 255, .20);
+  /* البرتقاليّ — من الأيقونة. للمسة واحدة في العنوان، لا للنصّ */
+  --gold: #f6a723;
 
-  --fg:       #f2f7f4;   /* عنوان */
-  --fg-body:  #d3e0d9;   /* متن */
-  --fg-muted: #9db0a6;   /* ثانويّ — 6.4:1 على --ink */
+  /* الحبر والأسطح — كحليّ */
+  --ink:      #061126;   /* القاع */
+  --ink-2:    #0a1a36;   /* خلف اللقطات */
+  --surface:  #0e2142;   /* بطاقة */
+  --surface-2:#132a52;   /* بطاقة مرتفعة */
+  --line:     rgba(255, 255, 255, .13);
+  --line-2:   rgba(255, 255, 255, .22);
 
-  --accent:      #4cc08b;
-  --accent-soft: rgba(76, 192, 139, .14);
-  --accent-line: rgba(76, 192, 139, .34);
+  --fg:       #f4f8fd;   /* عنوان */
+  --fg-body:  #d5e0ef;   /* متن */
+  --fg-muted: #a4b5cc;   /* ثانويّ — 9.0:1 على --ink، و6.8:1 على --surface-2 */
+
+  --accent:      #6fb0fb;   /* 8.3:1 على --ink */
+  --accent-soft: rgba(99, 166, 245, .14);
+  --accent-line: rgba(99, 166, 245, .36);
 
   --warn: #fdb022;
   --danger: #f97066;
@@ -127,21 +127,20 @@ a:hover { color: var(--p-300); }
 /* ═══ الترويسة الزجاجيّة ═══ */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(10, 13, 12, .72);
+  background: rgba(6, 17, 36, .72);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom: 1px solid transparent;
   transition: border-color .3s, background .3s;
 }
-.nav.stuck { border-bottom-color: var(--line); background: rgba(10, 13, 12, .9); }
+.nav.stuck { border-bottom-color: var(--line); background: rgba(6, 17, 36, .9); }
 .nav .shell { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3xl); min-height: 72px; }
 .brand { display: inline-flex; align-items: center; gap: var(--s-md); text-decoration: none; color: var(--fg); }
 .brand:hover { color: var(--fg); }
 .brand-mark {
   inline-size: 42px; block-size: 42px; flex: none;
   object-fit: contain; display: block;
-  padding: 5px; border-radius: var(--r-xl);
-  background: #eef4f0;
+  border-radius: var(--r-xl);
   box-shadow: 0 4px 14px -4px rgba(0, 0, 0, .6);
 }
 .brand b { display: block; font-size: 16px; line-height: 1.3; }
@@ -176,12 +175,12 @@ a:hover { color: var(--p-300); }
   transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
 }
 .btn-primary {
-  background-color: var(--p-500);
-  background-image: linear-gradient(150deg, var(--p-400), var(--p-600));
-  color: #04140c;
-  box-shadow: 0 10px 30px -10px rgba(76, 192, 139, .6);
+  background-color: var(--p-600);
+  background-image: linear-gradient(150deg, #1a72da, var(--p-700));
+  color: #fff;
+  box-shadow: 0 10px 30px -10px rgba(99, 166, 245, .6);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -10px rgba(76, 192, 139, .7); color: #04140c; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 38px -10px rgba(99, 166, 245, .7); color: #fff; }
 .btn-ghost { background: rgba(255, 255, 255, .05); color: var(--fg); border-color: var(--line-2); }
 .btn-ghost:hover { background: rgba(255, 255, 255, .1); border-color: var(--accent-line); color: var(--fg); transform: translateY(-2px); }
 @media (max-width: 560px) { .btn { inline-size: 100%; } }
@@ -209,8 +208,8 @@ a:hover { color: var(--p-300); }
 .hero::before {
   content: ""; position: absolute; inset: -20% -10% auto -10%; block-size: 900px;
   background:
-    radial-gradient(50% 50% at 70% 18%, rgba(37, 147, 95, .38) 0%, transparent 70%),
-    radial-gradient(46% 46% at 22% 8%, rgba(20, 87, 58, .40) 0%, transparent 72%);
+    radial-gradient(50% 50% at 70% 18%, rgba(20, 109, 213, .38) 0%, transparent 70%),
+    radial-gradient(46% 46% at 22% 8%, rgba(11, 61, 122, .40) 0%, transparent 72%);
   filter: blur(20px); pointer-events: none; z-index: 0;
 }
 /* حبيباتٌ خفيفة تكسر نعومة التدرّج — SVG مضمّن، لا ملفَّ صورة */
@@ -222,7 +221,7 @@ a:hover { color: var(--p-300); }
 .hero-grid { display: grid; gap: var(--s-6xl) var(--s-7xl); grid-template-columns: 1.05fr .95fr; align-items: center; }
 @media (max-width: 940px) { .hero-grid { grid-template-columns: 1fr; text-align: center; } }
 .hero h1 { margin: var(--s-3xl) 0 var(--s-3xl); }
-.hero h1 em { font-style: normal; color: var(--p-300); background: linear-gradient(120deg, var(--p-300), var(--p-500)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero h1 em { font-style: normal; color: var(--p-300); background: linear-gradient(120deg, var(--p-300), var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero-lede { font-size: clamp(17px, 1.5vw, 20px); color: var(--fg-muted); max-width: 46ch; }
 @media (max-width: 940px) { .hero-lede { margin-inline: auto; } }
 .hero-cta { display: flex; gap: var(--s-xl); flex-wrap: wrap; margin-top: var(--s-6xl); }
@@ -233,7 +232,7 @@ a:hover { color: var(--p-300); }
 .hero-stage { position: relative; display: grid; place-items: center; }
 .floaty { position: absolute; z-index: 3; }
 .glass {
-  background: rgba(20, 28, 25, .72);
+  background: rgba(14, 33, 62, .72);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--line-2); border-radius: var(--r-3xl);
   padding: var(--s-xl) var(--s-3xl);
@@ -250,7 +249,7 @@ a:hover { color: var(--p-300); }
 .phone {
   position: relative; inline-size: 100%; max-inline-size: 300px; margin-inline: auto;
   border-radius: 40px; padding: 11px;
-  background: linear-gradient(155deg, #39443e, #101613 60%);
+  background: linear-gradient(155deg, #3b4d6b, #0b1830 60%);
   box-shadow: 0 40px 80px -28px rgba(0, 0, 0, .9), 0 0 0 1px rgba(255, 255, 255, .07) inset;
 }
 .phone::before {
@@ -313,7 +312,7 @@ a:hover { color: var(--p-300); }
 }
 .steps li.on { color: var(--fg); }
 .steps li.on::before {
-  background: var(--accent); border-color: var(--accent); color: #04140c;
+  background: var(--accent); border-color: var(--accent); color: var(--ink);
   transform: scale(1.12);
 }
 
@@ -363,7 +362,7 @@ a:hover { color: var(--p-300); }
 .tile-hero {
   grid-column: span 6; display: grid; grid-template-columns: 1.1fr .9fr;
   gap: var(--s-6xl); align-items: center; padding: var(--s-6xl);
-  background: linear-gradient(140deg, rgba(37, 147, 95, .16), rgba(255, 255, 255, .02));
+  background: linear-gradient(140deg, rgba(20, 109, 213, .16), rgba(255, 255, 255, .02));
   border-color: var(--accent-line);
 }
 .tile-hero h3 { font-size: clamp(21px, 2.2vw, 28px); }
@@ -428,8 +427,8 @@ a:hover { color: var(--p-300); }
   border: 1px solid var(--accent-line); border-radius: var(--r-5xl);
   padding: var(--s-7xl) var(--s-4xl);
   background:
-    radial-gradient(70% 120% at 50% 0%, rgba(37, 147, 95, .3) 0%, transparent 66%),
-    linear-gradient(160deg, rgba(22, 106, 69, .35), rgba(9, 42, 30, .5));
+    radial-gradient(70% 120% at 50% 0%, rgba(20, 109, 213, .3) 0%, transparent 66%),
+    linear-gradient(160deg, rgba(15, 88, 173, .35), rgba(6, 18, 40, .5));
 }
 .cta h2 { margin-bottom: var(--s-xl); }
 .cta p { color: var(--fg-body); max-width: 52ch; margin-inline: auto; font-size: 18px; }
@@ -486,11 +485,11 @@ a:hover { color: var(--p-300); }
 @media (max-width: 940px) { .nav-sep { display: none; } }
 
 /* ── قسم التقارير ──────────────────────────────────────────────────
-   شريطٌ داكن يحمل التقارير السبعة: واحدٌ كبير (الإحصائيات) وستّة
-   حوله. اللقطات هنا هي المحتوى، فالبطاقة إطارٌ لا زخرفة. */
+   شريطٌ داكن: صفحة «الإحصائيات» بجانب العنوان، ثم التقارير التفصيلية
+   في مجموعاتها الخمس كما يرتّبها التطبيق نفسه. */
 .reports-band {
-  background-color: #0b0f0e;
-  background-image: radial-gradient(60% 90% at 80% 0%, rgba(37, 147, 95, .16) 0%, transparent 62%);
+  background-color: #081733;
+  background-image: radial-gradient(60% 90% at 80% 0%, rgba(20, 109, 213, .16) 0%, transparent 62%);
   padding-block: 72px;
 }
 .reports-lead {
@@ -518,6 +517,43 @@ a:hover { color: var(--p-300); }
 .rep h3 { font-size: 16px; margin-top: var(--s-2xl); margin-bottom: var(--s-xs); }
 .rep p { font-size: 14px; color: var(--fg-muted); line-height: 1.5; }
 
+/* مجموعات التقارير — قوائم لا لقطات: ثلاثة عشر تقريرًا في خمس بطاقات */
+.rep-groups {
+  display: grid; gap: var(--s-3xl);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+}
+.rep-group {
+  background: rgba(255, 255, 255, .035);
+  border: 1px solid var(--line); border-radius: var(--r-4xl);
+  padding: var(--s-3xl);
+}
+.rep-group h3 { font-size: 16px; color: var(--accent); margin-bottom: var(--s-md); letter-spacing: .02em; }
+.rep-group ul { list-style: none; margin: 0; padding: 0; }
+.rep-group li {
+  padding-block: var(--s-sm); color: var(--fg-body); font-size: 15px;
+  border-top: 1px solid var(--line);
+}
+.rep-group li:first-child { border-top: 0; }
+.rep-note { margin-top: var(--s-4xl); color: var(--fg-muted); font-size: 15px; max-width: 70ch; }
+
+/* ── الجهاز اللوحيّ ─────────────────────────────────────────────────
+   إطارٌ أعرض من الهاتف بزوايا أهدأ. اللقطتان من مقاس 10 بوصات،
+   بعرضٍ واحد — فلقطة الأقساط الطويلة لا تبتلع القسم. */
+.tablets {
+  display: grid; gap: var(--s-4xl); align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 400px));
+  justify-content: center;
+}
+@media (max-width: 760px) { .tablets { grid-template-columns: 1fr; } }
+.tablet {
+  margin: 0; border-radius: 30px; padding: 12px;
+  background: linear-gradient(155deg, #3b4d6b, #0b1830 60%);
+  box-shadow: 0 40px 80px -28px rgba(0, 0, 0, .9), 0 0 0 1px rgba(255, 255, 255, .07) inset;
+}
+.tablet img { display: block; inline-size: 100%; border-radius: 20px; background: var(--ink-2); }
+.tab-fig { margin: 0; inline-size: 100%; }
+.tab-fig figcaption { margin-top: var(--s-lg); font-size: 13px; color: var(--fg-muted); text-align: center; }
+
 /* ═══════════════════════════════════════════════════════════════════
    الصفحات القانونية على هويّة الموقع
    ═══════════════════════════════════════════════════════════════════
@@ -526,8 +562,8 @@ a:hover { color: var(--p-300); }
    — وإنما الإطار.
    ═══════════════════════════════════════════════════════════════════ */
 .legal-head {
-  background-color: #0b0f0e;
-  background-image: radial-gradient(70% 120% at 75% 0%, rgba(37, 147, 95, .22) 0%, transparent 65%);
+  background-color: #081733;
+  background-image: radial-gradient(70% 120% at 75% 0%, rgba(20, 109, 213, .22) 0%, transparent 65%);
   border-bottom: 1px solid var(--line);
   padding-block: var(--s-8xl) var(--s-6xl);
 }
@@ -562,7 +598,7 @@ a:hover { color: var(--p-300); }
 /* لوحاتُ التنبيه */
 .legal .note {
   border: 1px solid var(--line); border-inline-start: 3px solid var(--accent);
-  background: rgba(76, 192, 139, .07);
+  background: rgba(99, 166, 245, .07);
   border-radius: var(--r-2xl); padding: var(--s-3xl); margin-block: var(--s-4xl);
 }
 .legal .note-info { border-inline-start-color: #84adff; background: rgba(132, 173, 255, .08); }
@@ -580,7 +616,7 @@ a:hover { color: var(--p-300); }
   text-align: start; padding: var(--s-2xl); vertical-align: top;
   border-bottom: 1px solid var(--line);
 }
-.legal thead th { background: rgba(76, 192, 139, .1); color: var(--fg); font-weight: 600; }
+.legal thead th { background: rgba(99, 166, 245, .1); color: var(--fg); font-weight: 600; }
 .legal tbody th { background: rgba(255, 255, 255, .03); color: var(--fg); font-weight: 600; }
 .legal tbody tr:last-child > * { border-bottom: 0; }
 .legal .btn { margin-block: var(--s-2xl); }

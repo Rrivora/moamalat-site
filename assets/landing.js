@@ -1,4 +1,4 @@
-/* معاملات — حركة صفحة المنتج.
+/* شركتي — حركة صفحة المنتج.
    بلا مكتبات. وكلُّ ما هنا تحسينٌ فوق صفحةٍ تعمل بدونه:
    الشيفرة هي من يضيف `js-anim` فتُخفى العناصر استعدادًا للكشف.
    فمن عطّل JavaScript، أو فشل تحميل هذا الملفّ، يرى الصفحة كاملةً. */
@@ -16,7 +16,7 @@
 
   function bail(e) {
     root.classList.remove('js-anim');
-    if (window.console && console.warn) console.warn('[معاملات] تعطّلت الحركة، والصفحة تُعرض ساكنة:', e);
+    if (window.console && console.warn) console.warn('[شركتي] تعطّلت الحركة، والصفحة تُعرض ساكنة:', e);
   }
 
   try {
@@ -118,7 +118,9 @@
 
     function paint() {
       steps.forEach(function (s, n) { s.classList.toggle('on', n === i); });
-      var fi = Math.min(i, frames.length - 1);
+      // الخطوة تسمّي إطارها بـ data-frame إن لم يكن إطارُها بترتيبها
+      var named = steps[i].getAttribute('data-frame');
+      var fi = Math.min(named !== null ? +named : i, frames.length - 1);
       frames.forEach(function (f, n) {
         if (n === 0) f.classList.toggle('hide', fi !== 0);
         else f.classList.toggle('show', n === fi);
