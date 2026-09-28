@@ -650,3 +650,60 @@ a:hover { color: var(--p-300); }
 /* حزامُ أمان: أي أيقونةٍ داخل المتن لها مقاسٌ صريح، فلا تتمدّد أبدًا */
 .legal svg { inline-size: 22px; block-size: 22px; flex: none; }
 .legal .card-icon svg { inline-size: 24px; block-size: 24px; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   SITE1 — إضافاتٌ لسياسات Google Play
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* مبدّل اللغة: رابطٌ عاديّ إلى النسخة المقابلة، لا سكربت */
+.lang-switch {
+  display: inline-flex; align-items: center; min-height: 44px;
+  padding-inline: var(--s-lg); border-radius: var(--r-full);
+  border: 1px solid var(--line-2); color: var(--fg); text-decoration: none;
+  font-size: 14px; font-weight: 600; white-space: nowrap;
+}
+.lang-switch:hover { border-color: var(--accent-line); color: var(--fg); background: rgba(255, 255, 255, .06); }
+.nav-end { display: flex; align-items: center; gap: var(--s-md); }
+
+/* «قريبًا على Google Play» — نصٌّ لا شارة، ولا رابط، حتى يُنشر التطبيق */
+.soon {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s-sm);
+  min-height: 50px; padding-inline: var(--s-4xl); border-radius: var(--r-full);
+  border: 1px dashed var(--accent-line); background: var(--accent-soft);
+  color: var(--fg); font-size: 16px; font-weight: 600; white-space: nowrap;
+}
+.soon svg { inline-size: 20px; block-size: 20px; color: var(--accent); flex: none; }
+.nav .soon { min-height: 44px; padding-inline: var(--s-2xl); font-size: 14px; }
+@media (max-width: 560px) { .nav .soon { display: none; } .hero .soon, .cta .soon { inline-size: 100%; } }
+
+/* سطر «لا قروض ولا تمويل» — واضحٌ لا مخفيّ في الحواشي */
+.disclaimer {
+  display: flex; gap: var(--s-md); align-items: flex-start;
+  margin-top: var(--s-4xl); padding: var(--s-2xl) var(--s-3xl);
+  border: 1px solid var(--line-2); border-inline-start: 3px solid var(--gold);
+  border-radius: var(--r-2xl); background: rgba(246, 167, 35, .07);
+  color: var(--fg-body); font-size: 16px; max-width: 72ch; margin-inline: auto;
+}
+.disclaimer svg { inline-size: 22px; block-size: 22px; color: var(--gold); flex: none; margin-top: 2px; }
+.disclaimer strong { color: var(--fg); }
+
+/* خطوات الطلب البارزة في صفحة الحذف */
+.legal ol.big-steps { list-style: none; padding: 0; counter-reset: bs; margin-block: var(--s-4xl); }
+.legal ol.big-steps > li {
+  position: relative; counter-increment: bs;
+  padding: var(--s-3xl); padding-inline-start: 72px; margin-block: var(--s-xl);
+  border: 1px solid var(--accent-line); border-radius: var(--r-3xl);
+  background: rgba(99, 166, 245, .06);
+}
+.legal ol.big-steps > li::before {
+  content: counter(bs); position: absolute; inset-inline-start: var(--s-3xl); top: var(--s-3xl);
+  inline-size: 34px; block-size: 34px; border-radius: var(--r-full);
+  background: var(--accent); color: var(--ink); display: grid; place-items: center;
+  font-weight: 700; font-size: 16px;
+}
+.legal ol.big-steps > li > b { display: block; color: var(--fg); font-size: 18px; margin-bottom: var(--s-xs); }
+.legal ol.big-steps > li p { margin: var(--s-sm) 0 0; }
+
+/* النسخ الإنجليزيّة: الخطّ نفسه يحمل اللاتينيّة، والاتجاه من السمة */
+html[lang="en"] body { letter-spacing: 0; }
+.foot-legal { display: flex; flex-wrap: wrap; gap: var(--s-xs) var(--s-2xl); }
