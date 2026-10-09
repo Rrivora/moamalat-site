@@ -52,7 +52,7 @@
     <h1>Privacy Policy</h1>
     <div class="legal-meta">
       <span>Shirkati (شركتي) · Developer: Rivora</span>
-      <span>Last updated: 28 September 2026 · Applies to version 2.0.0 and later</span>
+      <span>Last updated: 10 October 2026 · Applies to version 2.0.0 and later (including what 2.1.0 adds)</span>
     </div>
   </div>
 </div>
@@ -105,6 +105,7 @@
     <li>when the device is online, what you recorded is uploaded to your company account on the server;</li>
     <li>the server holds the master copy: your company data is downloaded from it when you sign in on a new phone, and it tells the app your license status.</li>
   </ul>
+  <p><strong>“This phone only” company</strong> (from version 2.1.0, when support enables it for your account): its business data stays on your device only and is not uploaded; the server keeps only <strong>the company name, its owner and its license</strong>. Its backups are on your device and, if you link Google Drive, in your own Drive. Converting it to a synced company is done through support; you can switch a synced company to this mode yourself in the app.</p>
 
   <h2>4. Data we store, and why</h2>
   <div class="table-wrap">
@@ -139,12 +140,12 @@
   <ul>
     <li>We do not share your data with third parties and do not sell it. Supabase is a service provider that stores it on our behalf only.</li>
     <li>No analytics, no advertising, no crash reports sent to anyone.</li>
-    <li>We do not read your contacts. When you pick a customer's number, Android's contact picker opens and the app receives only the number you choose.</li>
+    <li>We do not upload or store your contacts. When you add a customer “from contacts”, the app asks for permission to read them so you can search them on your phone; the list stays in memory during the search only, and only the name and number you pick are saved for the customer. You may refuse and use Android's picker or type the number.</li>
     <li>No audio recordings, and no background location tracking.</li>
   </ul>
 
   <h2>6. Notifications</h2>
-  <p>All notifications are <strong>generated on your device</strong>: reminders for due installments, alerts when an operation is rejected during sync or attachment storage is nearly full, and a prompt to confirm a new suggested US dollar rate. We use no external push service. To turn them all off, disable the app's notification permission in your phone settings.</p>
+  <p>All notifications are <strong>generated on your device</strong>: reminders for due installments, a reminder for a customer visit you schedule, alerts when an operation is rejected during sync or attachment storage is nearly full, and a prompt to confirm a new suggested US dollar rate. We use no external push service. To turn them all off, disable the app's notification permission in your phone settings.</p>
 
   <h2>7. Device permissions</h2>
   <div class="table-wrap">
@@ -155,6 +156,7 @@
         <tr><td>Location</td><td>On request only: when you tap “My location” to set a customer's location. Never read in the background.</td></tr>
         <tr><td>Biometrics / device lock</td><td>To lock the app if you turn this on yourself — it is <strong>off by default</strong>. Android performs the check; your fingerprint never reaches the app or us.</td></tr>
         <tr><td>Notifications</td><td>For the alerts in section 6.</td></tr>
+        <tr><td>Contacts</td><td>On request only: when you add a customer “from contacts”, to search them on your phone (section 5). Never uploaded or stored.</td></tr>
         <tr><td>Camera</td><td>The app does not request camera permission; photos are taken or chosen through the system picker.</td></tr>
         <tr><td>Microphone</td><td>Not requested in this version.</td></tr>
       </tbody>
@@ -164,7 +166,8 @@
   <h2>8. External services</h2>
   <ul>
     <li><strong>Supabase</strong> — the server provider that stores your company data and files, in Frankfurt, Germany.</li>
-    <li><strong>Google Sign-In</strong> — we receive only your name, email and profile photo; the app requests no access to Drive or Gmail.</li>
+    <li><strong>Google Sign-In</strong> — we receive only your name, email and profile photo; the app requests no access to Gmail.</li>
+    <li><strong>Google Drive</strong> — only if you turn on backup to it: the <code>drive.file</code> scope alone, so the app sees only the files it created, not the rest of your Drive.</li>
     <li><strong>Google Play</strong> — to check for a newer version, directly between your device and the store.</li>
     <li><strong>OpenStreetMap and Esri maps</strong> — they receive your IP address and the area shown only, nothing about your customers.</li>
     <li><strong>WhatsApp and share targets</strong> — only when you choose to share an invoice, statement or reminder; that app's policy then applies.</li>
@@ -185,6 +188,7 @@
     <li><strong>Company data and files:</strong> on the server while the company account exists.</li>
     <li><strong>Records you delete in the app:</strong> move to “Deleted” so they can be restored, and are erased permanently with the company account or on your request.</li>
     <li><strong>The copy on your device:</strong> removed when you uninstall the app — this does not delete your company account on the server.</li>
+    <li><strong>“This phone only” company:</strong> its data lives only on your device and your backups; uninstalling without a backup loses it, and we cannot restore it from the server.</li>
     <li><strong>After a deletion request:</strong> our support team deletes all of the above within 30 days, as described on the <a href="delete-data-en.html">deletion page</a>.</li>
     <li><strong>Backups:</strong> Backup copies of deleted data may remain for up to 30 days, then are deleted automatically.</li>
   </ul>
