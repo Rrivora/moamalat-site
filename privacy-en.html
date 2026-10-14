@@ -52,7 +52,7 @@
     <h1>Privacy Policy</h1>
     <div class="legal-meta">
       <span>Shirkati (شركتي) · Developer: Rivora</span>
-      <span>Last updated: 10 October 2026 · Applies to version 2.0.0 and later (including what 2.1.0 adds)</span>
+      <span>Last updated: 14 October 2026 · Applies to version 2.0.0 and later (including what 2.1.0 and 2.2.0 add)</span>
     </div>
   </div>
 </div>
@@ -95,11 +95,12 @@
   <ul>
     <li><strong>“Privacy policy”</strong> — opens this page;</li>
     <li><strong>“Delete account and data”</strong> — opens the deletion page, with a <strong>“Request deletion by email”</strong> button below it that opens an email to us containing your company name and number.</li>
+    <li><strong>“My account” → “Delete account”</strong> (from version 2.2.0) — explains what is deleted, sends the deletion request by email with your username, and opens the deletion page.</li>
   </ul>
   <p>The <a href="delete-data-en.html">account and data deletion page</a> also works in any browser, without installing the app or signing in.</p>
 
   <h2>3. How the app works</h2>
-  <p>You sign in with Google and create a <strong>company</strong> with its name, phone, country and currency; a company code is generated automatically. After that:</p>
+  <p>You create an account with a <strong>username and password</strong> (from version 2.2.0), or sign in with Google — linking Google to your account is <strong>optional</strong>. Then you create a <strong>company</strong> with its name, phone, country and currency; a company code is generated automatically. After that:</p>
   <ul>
     <li>everything you record is saved on your device immediately, so you can work offline;</li>
     <li>when the device is online, what you recorded is uploaded to your company account on the server;</li>
@@ -114,7 +115,7 @@
         <tr><th scope="col">Data</th><th scope="col">What it includes</th><th scope="col">Purpose</th><th scope="col">Required?</th></tr>
       </thead>
       <tbody>
-        <tr><td>Account</td><td>Name, email and profile photo as sent by Google at sign-in, and an internal user ID.</td><td>App functionality · Account management</td><td>Required</td></tr>
+        <tr><td>Account</td><td>Username, first and last name, phone number, and password (stored <strong>hashed</strong> by the sign-in service, so we cannot see or recover it), and an internal user ID. If you link Google: name, email and profile photo as sent by Google.</td><td>App functionality · Account management</td><td>Required</td></tr>
         <tr><td>Phone and address</td><td>Your company's phone and address, and your customers' phones and addresses.</td><td>App functionality</td><td>Optional</td></tr>
         <tr><td>Precise location</td><td>A customer's location on the map, read only when you tap “My location” or set it yourself.</td><td>App functionality</td><td>Optional</td></tr>
         <tr><td>Other financial info</td><td>Invoices, installments, collections; cash boxes and expenses; suppliers and their payments; employees' salaries, attendance and advances.</td><td>App functionality</td><td>Required</td></tr>
@@ -139,7 +140,7 @@
   <h2>5. What we do not collect or do</h2>
   <ul>
     <li>We do not share your data with third parties and do not sell it. Supabase is a service provider that stores it on our behalf only.</li>
-    <li>No analytics, no advertising, no crash reports sent to anyone.</li>
+    <li>No analytics, no advertising, no crash reports sent to anyone. The “Diagnostics log” (from version 2.2.0, in “My account” → “Help &amp; support”) stays on your phone only for 8 days: app errors and warnings and the name of the company they happened in; it is never sent automatically and reaches us only if you choose “Share the log” or attach it in “Contact support”.</li>
     <li>We do not upload or store your contacts. When you add a customer “from contacts”, the app asks for permission to read them so you can search them on your phone; the list stays in memory during the search only, and only the name and number you pick are saved for the customer. You may refuse and use Android's picker or type the number.</li>
     <li>No audio recordings, and no background location tracking.</li>
   </ul>
@@ -166,7 +167,7 @@
   <h2>8. External services</h2>
   <ul>
     <li><strong>Supabase</strong> — the server provider that stores your company data and files, in Frankfurt, Germany.</li>
-    <li><strong>Google Sign-In</strong> — we receive only your name, email and profile photo; the app requests no access to Gmail.</li>
+    <li><strong>Google Sign-In</strong> (optional; you can sign in with your username and password alone) — we receive only your name, email and profile photo; the app requests no access to Gmail.</li>
     <li><strong>Google Drive</strong> — only if you turn on backup to it: the <code>drive.file</code> scope alone, so the app sees only the files it created, not the rest of your Drive.</li>
     <li><strong>Google Play</strong> — to check for a newer version, directly between your device and the store.</li>
     <li><strong>OpenStreetMap and Esri maps</strong> — they receive your IP address and the area shown only, nothing about your customers.</li>
@@ -189,6 +190,8 @@
     <li><strong>Records you delete in the app:</strong> move to “Deleted” so they can be restored, and are erased permanently with the company account or on your request.</li>
     <li><strong>The copy on your device:</strong> removed when you uninstall the app — this does not delete your company account on the server.</li>
     <li><strong>“This phone only” company:</strong> its data lives only on your device and your backups; uninstalling without a backup loses it, and we cannot restore it from the server.</li>
+    <li><strong>Deleting a company in the app</strong> (from version 2.2.0): it stays for <strong>7 days</strong>, during which the owner can restore it, then it is permanently erased with its data and files on the server.</li>
+    <li><strong>Unified instalment plan:</strong> merging a customer's instalments into one plan is stored with the company data like any other instalments, and adds no new personal data.</li>
     <li><strong>After a deletion request:</strong> our support team deletes all of the above within 30 days, as described on the <a href="delete-data-en.html">deletion page</a>.</li>
     <li><strong>Backups:</strong> Backup copies of deleted data may remain for up to 30 days, then are deleted automatically.</li>
   </ul>
